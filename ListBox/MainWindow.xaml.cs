@@ -40,7 +40,9 @@ namespace ListBox
 
             Colores.Add(new Color(txtbox1.Text, txtbox2.Text, txtbox3.Text));
             txtbox1.Text = "";
+
             txtbox2.Text = "";
+
             txtbox3.Text = "";
 
         }
@@ -58,7 +60,9 @@ namespace ListBox
             if (lstColores.SelectedIndex != -1)
             { 
             txtboxNombreA.Text = Colores[lstColores.SelectedIndex].Nombre;
+
             txtboxHexA.Text = Colores[lstColores.SelectedIndex].Hexadecimal;
+
             txtboxRgbA.Text = Colores[lstColores.SelectedIndex].RGB;
             }
         }
@@ -68,9 +72,12 @@ namespace ListBox
             if (lstColores.SelectedIndex != -1)
             {
                 Colores[lstColores.SelectedIndex].Nombre = txtboxNombreA.Text;
+
                 Colores[lstColores.SelectedIndex].Hexadecimal = txtboxHexA.Text;
+
                 Colores[lstColores.SelectedIndex].RGB = txtboxRgbA.Text;
             }
+            lstColores.Items.Refresh();
         }
     }
 }
